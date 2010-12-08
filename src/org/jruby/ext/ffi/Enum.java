@@ -3,7 +3,6 @@ package org.jruby.ext.ffi;
 
 import java.util.IdentityHashMap;
 import java.util.Map;
-import java.util.Set;
 import org.jcodings.util.IntHash;
 import org.jruby.Ruby;
 import org.jruby.RubyClass;

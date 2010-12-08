@@ -5,7 +5,6 @@ import org.jruby.compiler.ir.operands.Label;
 import org.jruby.compiler.ir.Operation;
 import org.jruby.compiler.ir.representations.InlinerInfo;
 import org.jruby.interpreter.InterpreterContext;
-import org.jruby.runtime.ThreadContext;
 import org.jruby.runtime.builtin.IRubyObject;
 
 public class LineNumberInstr extends NoOperandInstr

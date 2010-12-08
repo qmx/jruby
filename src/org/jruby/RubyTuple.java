@@ -5,7 +5,6 @@
 
 package org.jruby;
 
-import java.util.Arrays;
 import org.jruby.anno.JRubyMethod;
 import org.jruby.javasupport.util.RuntimeHelpers;
 import org.jruby.runtime.ObjectAllocator;

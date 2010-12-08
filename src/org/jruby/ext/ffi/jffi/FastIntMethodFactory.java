@@ -2,14 +2,11 @@
 package org.jruby.ext.ffi.jffi;
 
 import com.kenai.jffi.Function;
-import org.jruby.RubyArray;
 import org.jruby.RubyBoolean;
 import org.jruby.RubyHash;
 import org.jruby.RubyModule;
 import org.jruby.RubyNumeric;
-import org.jruby.RubySymbol;
 import org.jruby.ext.ffi.DirectMemoryIO;
-import org.jruby.ext.ffi.Enum;
 import org.jruby.ext.ffi.MappedType;
 import org.jruby.ext.ffi.NativeParam;
 import org.jruby.ext.ffi.NativeType;

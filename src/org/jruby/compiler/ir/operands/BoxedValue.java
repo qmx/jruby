@@ -3,7 +3,6 @@ package org.jruby.compiler.ir.operands;
 import java.util.List;
 import java.util.Map;
 
-import org.jruby.compiler.ir.IRClass;
 import org.jruby.compiler.ir.representations.InlinerInfo;
 
 public class BoxedValue extends Operand
