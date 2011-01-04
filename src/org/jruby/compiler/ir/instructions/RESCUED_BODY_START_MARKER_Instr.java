@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import org.jruby.compiler.ir.Operation;
 import org.jruby.compiler.ir.operands.Operand;
 import org.jruby.compiler.ir.operands.Label;
-import org.jruby.compiler.ir.representations.BasicBlock;
 import org.jruby.compiler.ir.representations.InlinerInfo;
 
 public class RESCUED_BODY_START_MARKER_Instr extends Instr

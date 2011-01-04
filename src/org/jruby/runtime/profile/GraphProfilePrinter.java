@@ -3,14 +3,7 @@ package org.jruby.runtime.profile;
 import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.Set;
-
-import org.jruby.internal.runtime.methods.DynamicMethod;
 
 public class GraphProfilePrinter extends AbstractProfilePrinter {
     public static MethodData currentData;

@@ -4,10 +4,7 @@ import org.jruby.compiler.ir.representations.BasicBlock;
 import org.jruby.compiler.ir.representations.CFG.CFG_Edge;
 import org.jruby.compiler.ir.instructions.Instr;
 
-import java.util.ArrayList;
 import java.util.BitSet;
-import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 
 /* This framework right now implicitly uses the CFG as the flow graph -- perhaps it is worth abstracting away from this assumption

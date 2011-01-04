@@ -1,7 +1,5 @@
 package org.jruby.compiler.ir.compiler_pass;
 
-import java.util.List;
-
 import org.jruby.compiler.ir.IRScope;
 import org.jruby.compiler.ir.IRExecutionScope;
 import org.jruby.compiler.ir.compiler_pass.CompilerPass;

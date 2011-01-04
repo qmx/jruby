@@ -1,9 +1,5 @@
 package org.jruby.runtime.profile;
 
-import java.io.PrintStream;
-import org.jruby.internal.runtime.methods.DynamicMethod;
-import org.jruby.runtime.ThreadContext;
-
 public interface IProfileData {
 
     /**

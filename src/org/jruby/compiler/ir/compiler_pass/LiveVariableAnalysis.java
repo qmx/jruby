@@ -4,7 +4,6 @@ import org.jruby.compiler.ir.IRScope;
 import org.jruby.compiler.ir.IRMethod;
 import org.jruby.compiler.ir.IRClosure;
 import org.jruby.compiler.ir.compiler_pass.CompilerPass;
-import org.jruby.compiler.ir.operands.Variable;
 import org.jruby.compiler.ir.representations.CFG;
 import org.jruby.compiler.ir.dataflow.analyses.LiveVariablesProblem;
 

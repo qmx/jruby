@@ -4,7 +4,6 @@ import org.jruby.compiler.ir.IRClass;
 
 import java.math.BigInteger;
 import org.jruby.interpreter.InterpreterContext;
-import org.jruby.runtime.builtin.IRubyObject;
 
 public class Fixnum extends Constant {
     final public Long value;

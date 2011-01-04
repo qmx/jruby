@@ -11,7 +11,6 @@ import org.jruby.RubyModule;
 import org.jruby.runtime.builtin.IRubyObject;
 import org.jruby.RubyObject;
 import org.jruby.internal.runtime.methods.DynamicMethod;
-import org.jruby.runtime.ThreadContext;
 
 public class AbstractProfilePrinter {
     public void printProfile(PrintStream out) {

@@ -5,8 +5,6 @@
 
 package org.jruby.interpreter;
 
-import java.util.HashMap;
-import java.util.Map;
 import org.jruby.Ruby;
 import org.jruby.runtime.Block;
 import org.jruby.runtime.DynamicScope;

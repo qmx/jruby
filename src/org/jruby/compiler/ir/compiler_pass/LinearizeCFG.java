@@ -5,7 +5,6 @@ import java.util.List;
 import org.jruby.compiler.ir.IRScope;
 import org.jruby.compiler.ir.IRExecutionScope;
 import org.jruby.compiler.ir.compiler_pass.CompilerPass;
-import org.jruby.compiler.ir.representations.CFG;
 import org.jruby.compiler.ir.representations.BasicBlock;
 
 public class LinearizeCFG implements CompilerPass

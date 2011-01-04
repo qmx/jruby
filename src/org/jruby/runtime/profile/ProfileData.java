@@ -1,21 +1,6 @@
 package org.jruby.runtime.profile;
 
-import java.io.PrintStream;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.Set;
-import java.text.DecimalFormat;
-import org.jruby.RubyClass;
-import org.jruby.MetaClass;
-import org.jruby.RubyModule;
-import org.jruby.runtime.builtin.IRubyObject;
-import org.jruby.RubyObject;
-import org.jruby.internal.runtime.methods.DynamicMethod;
 import org.jruby.runtime.ThreadContext;
 
 /**

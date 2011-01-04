@@ -5,10 +5,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 
-import org.jruby.RubyClass;
-import org.jruby.RubyModule;
-import org.jruby.internal.runtime.methods.DynamicMethod;
-
 public class FlatProfilePrinter extends AbstractProfilePrinter {
     private static final int SERIAL_OFFSET = 0;
     private static final int SELFTIME_OFFSET = 1;

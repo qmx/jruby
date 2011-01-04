@@ -13,7 +13,6 @@ import org.jruby.compiler.ir.operands.LocalVariable;
 import org.jruby.compiler.ir.operands.Operand;
 import org.jruby.compiler.ir.instructions.ReceiveSelfInstruction;
 import org.jruby.compiler.ir.operands.MetaObject;
-import org.jruby.compiler.ir.operands.ModuleMetaObject;
 import org.jruby.parser.LocalStaticScope;
 import org.jruby.parser.StaticScope;
 
