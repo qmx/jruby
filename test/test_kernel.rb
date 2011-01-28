@@ -782,6 +782,16 @@ class TestKernel < Test::Unit::TestCase
     ENV['RUBYOPT'] = old
   end
 
+  # JRUBY-5431
+  def test_exit_bang
+    `ruby -e "exit!"`
+    assert_equal 1, $?.exitstatus
+    `ruby -e "exit!(true)"`
+    assert_equal 0, $?.exitstatus
+    `ruby -e "exit!(false)"`
+    assert_equal 1, $?.exitstatus
+  end
+
 #  test
 #  trace_var
 #  trap
