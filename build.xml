@@ -1430,73 +1430,6 @@
     <checksum file="${dist.dir}/jruby-bin-${version.jruby}.tar.gz" algorithm="sha1"/>
   </target>
 
-  <target name="dist-src" depends="jar-dist">
-    <mkdir dir="${dist.stage.src.dir}"/>
-    <copy todir="${dist.stage.src.dir}">
-      <fileset dir="${basedir}">
-        <patternset refid="dist.bindir.files"/>
-        <patternset refid="dist.lib.files"/>
-      </fileset>
-    </copy>
-    <rake task="install_dist_gems['${dist.stage.src.dir}']"/>
-    <fixEOLs dist-stage-dir="${dist.stage.src.dir}"/>
-    <tar destfile="${dist.dir}/jruby-src-${version.jruby}.tar.gz" compression="gzip">
-      <tarfileset dir="${dist.stage.src.dir}" mode="755" prefix="jruby-${version.jruby}">
-        <include name="bin/**"/>
-      </tarfileset>
-      <tarfileset dir="${dist.stage.src.dir}" prefix="jruby-${version.jruby}">
-        <include name="lib/**"/>
-      </tarfileset>
-      <tarfileset dir="${basedir}" prefix="jruby-${version.jruby}">
-        <patternset refid="dist.src.files"/>
-      </tarfileset>
-      <tarfileset dir="${basedir}" prefix="jruby-${version.jruby}">
-        <patternset refid="dist.nailgun.files"/>
-      </tarfileset>
-      <tarfileset dir="${basedir}" mode="755" prefix="jruby-${version.jruby}">
-          <include name="tool/nailgun/configure"/>
-      </tarfileset>
-      <tarfileset dir="${base.dir}" prefix="jruby-${version.jruby}">
-          <include name="spi/**"/>
-      </tarfileset>
-      <tarfileset dir="${basedir}" mode="755" prefix="jruby-${version.jruby}">
-          <include name="test/testapp/testapp"/>
-          <include name="test/testapp/testapp.exe"/>
-          <include name="test/org/jruby/util/shell_launcher_test*"/>
-      </tarfileset>
-    </tar>
-    <zip destfile="${dist.dir}/jruby-src-${version.jruby}.zip">
-      <zipfileset dir="${dist.stage.src.dir}" filemode="755" prefix="jruby-${version.jruby}">
-        <include name="bin/**"/>
-      </zipfileset>
-      <zipfileset dir="${dist.stage.src.dir}" prefix="jruby-${version.jruby}">
-        <include name="lib/**"/>
-      </zipfileset>
-      <zipfileset dir="${basedir}" prefix="jruby-${version.jruby}">
-        <patternset refid="dist.src.files"/>
-      </zipfileset>
-      <zipfileset dir="${basedir}" prefix="jruby-${version.jruby}">
-        <patternset refid="dist.nailgun.files"/>
-      </zipfileset>
-      <zipfileset dir="${basedir}" filemode="755" prefix="jruby-${version.jruby}">
-        <include name="tool/nailgun/configure"/>
-      </zipfileset>
-      <zipfileset dir="${base.dir}" prefix="jruby-${version.jruby}">
-	<include name="spi/**"/>
-      </zipfileset>
-      <zipfileset dir="${basedir}" filemode="755" prefix="jruby-${version.jruby}">
-        <include name="test/testapp/testapp"/>
-        <include name="test/testapp/testapp.exe"/>
-        <include name="test/org/jruby/util/shell_launcher_test*"/>
-      </zipfileset>
-    </zip>
-
-    <checksum file="${dist.dir}/jruby-src-${version.jruby}.zip" algorithm="md5"/>
-    <checksum file="${dist.dir}/jruby-src-${version.jruby}.zip" algorithm="sha1"/>
-    <checksum file="${dist.dir}/jruby-src-${version.jruby}.tar.gz" algorithm="md5"/>
-    <checksum file="${dist.dir}/jruby-src-${version.jruby}.tar.gz" algorithm="sha1"/>
-  </target>
-
   <target name="dist-snapshot" depends="jar-dist">
     <jar destfile="${lib.dir}/jruby.jar" update="true">
       <fileset dir="${jruby.classes.dir}">
@@ -1526,7 +1459,7 @@
     </antcall>
   </target>
 
-  <target name="dist" depends="install-dev-gems,dist-bin,dist-src,dist-jar-complete">
+  <target name="dist" depends="install-dev-gems,dist-bin,dist-jar-complete">
     <rake task="gem"/>
     <rake task="installer"/>
   </target>
