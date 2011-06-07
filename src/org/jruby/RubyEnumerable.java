@@ -114,7 +114,13 @@ public class RubyEnumerable {
     }
 
     public static IRubyObject checkArgs(Ruby runtime, IRubyObject[]largs) { 
-        return largs.length == 0 ? runtime.getNil() : largs[0];
+        if (largs.length == 0) {
+            return runtime.getNil();
+        } else if (largs.length == 1) {
+            return largs[0];
+        } else {
+            return runtime.newArray(largs);
+        }
     }
 
     @JRubyMethod
