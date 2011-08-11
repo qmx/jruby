@@ -14,6 +14,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import org.jruby.CompatVersion;
+import org.jruby.Component;
 import org.jruby.runtime.Visibility;
 
 /**
@@ -91,4 +92,9 @@ public @interface JRubyMethod {
      * Whether this method should show up as defined in response to respond_to? calls
      */
     boolean notImplemented() default false;
+
+    /**
+     * What components this method is part of
+     */
+    Component[] components() default {};
 }

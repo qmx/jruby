@@ -1,5 +1,7 @@
 package org.jruby.anno;
 
+import org.jruby.Component;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -17,4 +19,8 @@ public @interface JRubyClass {
     //This parameter should only be used to point out if something is a Module instead of a Class
     String parent() default "Object";
     String[] include() default {};
+    /**
+     * What components this class methods are part of
+     */
+    Component[] components() default {};
 }
