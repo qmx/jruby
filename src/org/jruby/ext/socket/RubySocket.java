@@ -55,6 +55,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.jruby.Component;
 import org.jruby.Ruby;
 import org.jruby.RubyArray;
 import org.jruby.RubyClass;
@@ -88,7 +89,7 @@ import java.nio.channels.spi.AbstractSelectableChannel;
 /**
  * @author <a href="mailto:ola.bini@ki.se">Ola Bini</a>
  */
-@JRubyClass(name="Socket", parent="BasicSocket", include="Socket::Constants")
+@JRubyClass(name="Socket", parent="BasicSocket", include="Socket::Constants", components = {Component.IO, Component.Socket})
 public class RubySocket extends RubyBasicSocket {
     @JRubyClass(name="SocketError", parent="StandardError")
     public static class SocketError {}
