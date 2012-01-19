@@ -1534,6 +1534,7 @@ public final class Ruby {
             addLazyBuiltin("fiber.rb", "fiber", "org.jruby.ext.fiber.FiberExtLibrary");
             addLazyBuiltin("psych.jar", "psych", "org.jruby.ext.psych.PsychLibrary");
             addLazyBuiltin("coverage.jar", "coverage", "org.jruby.ext.coverage.CoverageLibrary");
+            addLazyBuiltin("jdate.jar", "jdate", "org.jruby.ext.date.DateService");
 
             // TODO: implement something for these?
             Library dummy = new Library() {
